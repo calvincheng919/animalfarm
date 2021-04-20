@@ -25,40 +25,44 @@ Animal.prototype.render = function() {
 
   // i need to create this html: <div class="catObject">Cat</div>
 
-  let catDiv = document.createElement('div');
-  catDiv.className = 'catObject';
-  catDiv.textContent = 'Cat';
-
-  // how to finally render on html
-  // this is an animal functin... why are we specifically using cat?
-
+  let animalDiv = document.createElement('div');
+  animalDiv.className = `${this.animalName}Object`;
+  animalDiv.textContent = this.animalName;
+  let farm = document.querySelector('#farm')
+  farm.appendChild(animalDiv);
 }
 
-//TODO: for Monday
-// 1. When the user clicks on the cat button, I want a cat to be created under the cat "button". Need to create an event listener for a click on that button
-// - target the cat button
-// - attach a listener to listen to the 'click'
-// - I want to respond to the click with my own list of things to do (create and render the cat)
-
-//Step by Step
-// 1. Target the cat button
-
+//make cat
 let makeCatButton = document.getElementById('makeCat');
-
-// 2. Attach an event listener to listen to the 'click' of cat button
-
-// anonymous function
-// on a click, please run/invoke the function - put () around at the end
-
 makeCatButton.addEventListener('click', goMakeCat)
-
-// 3. Respond to the click by console.log('cat was clicked')
 
 function goMakeCat() {
   console.log('cat was clicked')
-
-  // target the item that cat object is to attach to
-  // create the cat object 
-  // you want to call the cat render(), and render should put the cat on the html screen
-
+  let cat = new Animal('cat');
+  cat.render();
 }
+
+//make dog
+let makeDogButton = document.getElementById('makeDog');
+makeDogButton.addEventListener('click', goMakeDog)
+
+function goMakeDog() {
+  console.log('dog was clicked')
+  let dog = new Animal('dog');
+  dog.render();
+}
+
+// make horse
+
+
+// make sheep
+
+
+
+
+
+
+
+
+
+
