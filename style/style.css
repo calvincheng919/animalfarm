@@ -34,10 +34,39 @@
   padding: 10px;
   height: 150px;
   width: 150px;
-  background-color: lightyellow;
+  background-color: lightsalmon;
   border: solid black 1px;
   margin: 10px;
   border-radius: 50%;
   margin: auto;
   text-align: center;
+}
+
+.sheepObject {
+  padding: 10px;
+  height: 150px;
+  width: 150px;
+  background-color: lightskyblue;
+  border: solid black 1px;
+  margin: 10px;
+  border-radius: 50%;
+  margin: auto;
+  text-align: center;
+}
+
+.horseObject {
+  padding: 10px;
+  height: 150px;
+  width: 150px;
+  background-color: lightgreen;
+  border: solid black 1px;
+  margin: 10px;
+  border-radius: 50%;
+  margin: auto;
+  text-align: center;
+}
+
+#farm {
+  display: flex;
+  justify-content: center;
 }
