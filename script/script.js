@@ -9,20 +9,27 @@ function Animal(animalName) {
 // render tells the specific animal to put itself on the screen
 Animal.prototype.render = function() {
   console.log("this function has been called")
+  // what does this declaration do?
   let animalDiv = document.createElement('div');
+  // what is this next line doing?
   animalDiv.className = `${this.animalName}Object`;
+  // what is this next line doing?
   animalDiv.textContent = this.animalName;
   let animalSection = document.querySelector(`#${this.animalName}Section`)
   animalSection.appendChild(animalDiv);
 }
 
 //make cat
-
+//document
 let makeCatButton = document.getElementById('makeCat');
+//document
 makeCatButton.addEventListener('click', goMakeCat)
+//document
 function goMakeCat() {
   console.log('cat was clicked')
+  // document
   let cat = new Animal('cat');
+  // document
   cat.render();
 }
 //make dog
